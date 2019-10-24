@@ -1,6 +1,6 @@
 # Johns Hopkins Test Solr Container
 
-This project demonstates a functionig Solr docker container running in AWS ECS. 
+This project demonstates a Solr docker container running in AWS ECS. 
 
 Notes: 
   an ECS enabled AMI must be used
