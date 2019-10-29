@@ -3,3 +3,4 @@ infrastructure/*.tfstate
 infrastructure/*.backup
 infrastructure/.terraform
 infrastructure/.terraform/*
+blacklightcore/data/*

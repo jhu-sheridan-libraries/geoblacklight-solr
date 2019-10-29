@@ -1,14 +1,14 @@
-resource "aws_cloudwatch_log_group" "hello_world" {
-  name              = "hello_world"
+resource "aws_cloudwatch_log_group" "geoblacklight_solr" {
+  name              = "geoblacklight_solr"
   retention_in_days = 1
 }
 
-resource "aws_ecs_task_definition" "hello_world" {
-  family = "hello_world"
+resource "aws_ecs_task_definition" "geoblacklight_solr" {
+  family = "geoblacklight_solr"
   container_definitions = <<EOF
 [
   {
-    "name": "hello_world2",
+    "name": "solr",
     "image": "${var.container_id}",
     "portMappings": [
       {
@@ -26,7 +26,7 @@ resource "aws_ecs_task_definition" "hello_world" {
       "logDriver": "awslogs",
       "options": {
         "awslogs-region": "${var.region}",
-        "awslogs-group": "hello_world",
+        "awslogs-group": "geoblacklight_solr",
         "awslogs-stream-prefix": "complete-ecs"
       }
     }
