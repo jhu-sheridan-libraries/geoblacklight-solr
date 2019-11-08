@@ -1,4 +1,4 @@
-resource "aws_ecs_service" "hello_world" {
+resource "aws_ecs_service" "geoblacklight" {
   name = "geoblacklight_solr"
   cluster = "${aws_ecs_cluster.test-ecs-cluster.id}"
   task_definition = "${aws_ecs_task_definition.geoblacklight_solr.arn}"

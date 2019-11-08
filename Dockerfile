@@ -38,6 +38,12 @@ RUN chown -R solr:solr /start
 COPY blacklightcore /opt/blacklightcore
 RUN chown -R solr:solr /opt/blacklightcore
 
+##### load geoblacklight test data #####
+COPY geojsontest/01d-01 /opt/data
+RUN chown -R solr:solr /opt/data
+
+
+
 USER solr
 RUN ln -s /opt/blacklightcore /opt/solr/server/solr/blacklightcore
 
